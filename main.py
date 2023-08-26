@@ -31,8 +31,8 @@ def index():
 @app.route('/display/<filename>')
 def display(filename):
     # Construct the path to the uploaded image
-    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    
+    image_path = os.path.join("../", app.config['UPLOAD_FOLDER'], filename)
+    image_path = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
     return render_template('display.html', image_path=image_path)
 
 if __name__ == '__main__':
